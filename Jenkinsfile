@@ -1,11 +1,14 @@
 pipeline {
     agent {
-        docker { image 'debian:latest' }
+        docker {
+            image 'hasicorp/terraform:latest'
+            args '--entrypoint=""'
+        }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'cat /etc/debian_version'
+                sh 'terraform version'
             }
         }
     }
