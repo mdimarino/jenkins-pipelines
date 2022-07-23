@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'hasicorp/terraform:latest'
+            image 'hashicorp/terraform:latest'
             args '--entrypoint=""'
         }
     }
