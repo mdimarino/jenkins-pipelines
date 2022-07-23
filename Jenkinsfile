@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        docker { image 'amazon/aws-cli:latest' }
+        docker { 
+            image 'amazon/aws-cli:latest'
+            args '--entrypoint=""'
+        }
     }
     stages {
         stage('Test') {
