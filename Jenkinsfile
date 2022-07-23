@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'uname -a'
+                sh 'cat /etc/debian_version'
             }
         }
     }
