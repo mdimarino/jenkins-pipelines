@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'debian:latest' }
+        docker { image 'amazon/aws-cli:latest' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'cat /etc/debian_version'
+                sh 'aws --version'
             }
         }
     }
