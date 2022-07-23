@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'python:alpine' }
+        docker { image 'debian:latest' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'python --version'
+                sh 'uname -a'
             }
         }
     }
