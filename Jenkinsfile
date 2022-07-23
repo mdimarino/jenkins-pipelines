@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'debian:latest' }
+        docker { image 'gcc:latest' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'uname -a'
+                sh 'gcc --version'
             }
         }
     }
